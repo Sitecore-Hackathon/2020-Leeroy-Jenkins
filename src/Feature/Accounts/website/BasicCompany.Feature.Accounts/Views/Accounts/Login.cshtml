@@ -1,0 +1,33 @@
+﻿@using System.Web.Mvc.Html
+@using AuthenticationManager = Sitecore.Security.Authentication.AuthenticationManager
+@model BasicCompany.Feature.Accounts.Models.LoginInfo
+
+@{
+    var user = AuthenticationManager.GetActiveUser();
+    var message = "Sign In";
+    if (user == null)
+    {
+        message = "Invalid Password - Sign In";
+    }
+}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        @message
+    </a>
+    <div class="dropdown-menu px-3 py-3">
+        <form class="form" method="POST" name="Login" role="form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">User Name</label>
+                @Html.TextBoxFor(x => x.UserName, null, new { @placeholder = "User Name", @class = "form-control", @type = "text", @id = "userName" })
+                @*<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">*@
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                @Html.TextBoxFor(x => x.Password, null, new { @placeholder = "Password", @class = "form-control", @type = "password", @id = "password" })
+
+                @*<input type="password" class="form-control" id="exampleInputPassword1">*@
+            </div>
+            <button type="submit" class="btn btn-login">Submit</button>
+        </form>
+    </div>
+</li>

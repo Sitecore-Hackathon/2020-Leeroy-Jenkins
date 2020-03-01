@@ -1,0 +1,42 @@
+﻿---
+ID: "52c8cc8f-1ca2-4bc5-b54f-bdabcaef3e32"
+Parent: "97479c6b-bb30-4a15-afd1-2c89f207e9d6"
+Template: "8652fda7-75fe-47c6-a434-386c18cc7e90"
+Path: /sitecore/content/Basic Company/Home/Project Registration
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "04bf00db-f5fb-41f7-8ab7-22408372a981"
+      Hint: __Final Renderings
+      Type: Layout
+      Value: |
+        <r xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+          <d
+            id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"
+            l="{4ED48317-062F-4465-B9AF-1E636841525B}">
+            <r
+              id="{AF0D28F1-B659-4392-8FCF-E250DF527FA3}"
+              ph="header"
+              uid="{922C9764-CB8F-4A9D-9047-AE87B94746FD}" />
+            <r
+              ds=""
+              id="{F8F467A5-64A8-462D-8FEA-7FA527B1A180}"
+              par=""
+              ph="main"
+              uid="{81131FA7-1598-4342-85B3-604A3D314FBF}" />
+            <r
+              id="{78BCD6B7-FB7B-4D9D-90D1-78A2C45FCF49}"
+              ph="footer"
+              uid="{1B6146DF-AC5E-4C31-BE14-5D1FF7E58731}" />
+          </d>
+        </r>
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T174320Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

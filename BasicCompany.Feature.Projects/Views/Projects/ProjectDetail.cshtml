@@ -1,0 +1,88 @@
+﻿@using System.Web.Mvc.Html
+@model BasicCompany.Feature.Projects.Models.ProjectModel
+
+
+@{
+    List<SelectListItem> webServerOS = new List<SelectListItem>();
+    webServerOS.Add(new SelectListItem
+    {
+        Text = "Windows 8",
+        Value = "Windows8"
+    });
+    webServerOS.Add(new SelectListItem
+    {
+        Text = "Windows 10",
+        Value = "Windows10",
+        Selected = true
+    });
+    webServerOS.Add(new SelectListItem
+    {
+        Text = "Windows Server 2016",
+        Value = "WindowsServer2016"
+    });
+
+
+    List<SelectListItem> sitecoreProductItems = new List<SelectListItem>();
+    sitecoreProductItems.Add(new SelectListItem
+    {
+        Text = "Sitecore 8.1",
+        Value = "Sitecore 8.1"
+    });
+    sitecoreProductItems.Add(new SelectListItem
+    {
+        Text = "Sitecore 8.2",
+        Value = "Sitecore 8.2",
+        Selected = true
+    });
+    sitecoreProductItems.Add(new SelectListItem
+    {
+        Text = "Sitecore 9",
+        Value = "Sitecore 9"
+    });
+}
+
+<div class="container main-container">
+    <div id="cards" class="row mb-5"></div><!--row-->
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form method="post" name="ProjectDetail" class="form">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="moduleTitle">Module Title</label>
+                        @Html.TextBoxFor(x => x.ModuleTitle, null, new { @placeholder = "Module Title", @class = "form-control", @type = "text", @id = "moduleTitle" })
+                    </div>
+                    <div class="form-group">
+                        <label for="moduleDescription">Module Description</label>
+                        @Html.TextAreaFor(x => x.ModuleDescription, new { @class = "form-control", @id = "moduleDescription", @rows = "3" })
+                    </div>
+                    <div class="form-group">
+                        <label for="webServer">Web Server OS</label>
+
+                        @Html.DropDownListFor(model => model.WebServerOs, webServerOS, "-- Select Item --")
+
+                        @*<select class="form-control" id="webServer">
+                            <option>Windows 8</option>
+                            <option>Windows 10</option>
+                            <option>Windows Server 2016 R2</option>
+                        </select>*@
+                    </div>
+                    <div class="form-group">
+                        <label for="sitecoreProduct">Sitecore Product</label>
+
+                        @Html.DropDownListFor(model => model.SitecoreProduct, sitecoreProductItems, "-- Select Item --")
+                        @*<select class="form-control" id="sitecoreProduct">
+                            <option>Sitecore 8.1</option>
+                            <option>Sitecore 8.1</option>
+                            <option>Sitecore 9</option>
+                        </select>*@
+                    </div>
+                    <div class="form-group">
+                        <label for="price">$ Price</label>
+                        @Html.TextBoxFor(x => x.Price, null, new { @placeholder = "1000", @class = "form-control", @type = "number", @min = "number", @max = "10000.00", step = "0.01", @id = "price" })
+                    </div>
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

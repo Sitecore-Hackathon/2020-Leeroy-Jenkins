@@ -1,0 +1,29 @@
+﻿---
+ID: "b92a216c-754a-4d72-be55-9721c61ad70a"
+Parent: "40aec78f-751c-492c-ba22-79fa456d1613"
+Template: "25e91140-7dec-4a28-8cd9-59c432c39a16"
+Path: /sitecore/content/Basic Company/Home/Projects/Module Title 6
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20200229T231957Z
+    - ID: "3d00ffa2-19c3-4fdb-aa4a-c12c53c3b068"
+      Hint: WebServerOS
+      Value: Windows10
+    - ID: "41dd4b40-c329-4e48-af10-3175ad8a0df5"
+      Hint: ModuleTitle
+      Value: Module Title 6
+    - ID: "47d11429-1db7-45a1-b7ab-de9e082781e5"
+      Hint: Price
+      Value: 3000
+    - ID: "91f2e072-41c0-4aba-9cb5-7df29460edd4"
+      Hint: ModuleDescription
+      Value: Module Description
+    - ID: "adf180bf-82bd-4076-8351-3277b960374a"
+      Hint: SitecoreProduct
+      Value: Sitecore 8.2

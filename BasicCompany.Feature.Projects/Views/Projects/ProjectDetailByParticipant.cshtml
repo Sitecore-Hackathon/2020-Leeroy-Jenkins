@@ -1,0 +1,26 @@
+﻿@using System.Web.Mvc.Html
+@model BasicCompany.Feature.Projects.Models.FeaturedProjectModel
+
+<div class="container main-container">
+    <div class="row mb-5">
+        @foreach (var entry in Model.FeaturedProjects)
+        {
+            <div class="col-sm-6 col-md-4 col-lg-3 mt-4">
+                <div class="card card-inverse card-info" data-id="@entry.SitecoreProduct">
+                    <span class="badge badge-pill badge-info">@entry.SitecoreProduct</span>
+                    <img class="card-img-top" src="https://picsum.photos/200/150/?random">
+                    <div class="card-block">
+                        <h4 class="card-title mt-3">@entry.ModuleTitle</h4>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stars d-flex pb-3">
+                            <span class='icon' title='Vote'><i class="fas fa-vote-yea"></i>3</span>
+                        </div>
+                        <a href='#' targer="_blank" class="btn btn-danger">Vote</a>
+                        <a href='#' targer="_blank" class="btn btn-danger">Apply</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
